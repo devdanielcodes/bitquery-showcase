@@ -1,0 +1,13 @@
+query{
+   ethereum {
+    dexTrades( options: {desc: "count"}
+    ) {
+      count
+      tradeAmount(in:USD)
+      exchange {
+        fullName
+      }
+      
+    }
+  }
+}

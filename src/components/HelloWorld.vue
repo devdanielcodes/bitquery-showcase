@@ -2,11 +2,11 @@
   <div class="landing">
     <div class="main">
       <h1>BLOCK-Q</h1>
-      <p>transactions and blocks information gotten from the top blockchains in the world</p>
-      <router-link to="/blockchain">See Information</router-link>
+      <p>transactions and blocks information gotten from the top Cryptos in the world</p>
+      <router-link to="/blockchains">See Information</router-link>
     </div>
     <div class="foot">
-      <p>Created with Vue and Bitquery GraphQL API</p>
+      <p>Created with Vue and <a href="https://explorer.bitquery.io/" target="_blank">Bitquery GraphQL API</a> </p>
     </div>
     <img class="bitcoin" src="https://res.cloudinary.com/devdaniel/image/upload/v1608348341/bitcoin_wfbnka.png" alt="">
     <img class="eth" src="https://res.cloudinary.com/devdaniel/image/upload/v1608348341/ethereum_hvv0t2.png" alt="">
@@ -53,7 +53,9 @@
   justify-content: center;
   flex-direction: column;
   color: #828282;
-
+}
+.foot a{
+  color: black
 }
 .hand{
   position: absolute;

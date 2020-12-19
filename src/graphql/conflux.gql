@@ -1,6 +1,6 @@
 query{
   conflux{
-         __typename
+    __typename
     
     blocks{
       count

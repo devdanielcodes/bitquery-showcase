@@ -1,6 +1,6 @@
 query{
   binance{
-         __typename
+    __typename
     
     blocks{
       count

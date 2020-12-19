@@ -1,14 +1,14 @@
 query{
-  ethereum{
-     __typename
+  conflux{
+         __typename
     
     blocks{
       count
       __typename
     }
     transactions{
-      __typename
       count
+      __typename
       amount
     }
   }

@@ -1,15 +1,14 @@
 query{
-  ethereum{
-     __typename
+  binance{
+         __typename
     
     blocks{
       count
       __typename
     }
     transactions{
-      __typename
       count
-      amount
+      __typename
     }
   }
 }

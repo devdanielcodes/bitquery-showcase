@@ -1,5 +1,5 @@
 query{
-  ethereum{
+  algorand{
      __typename
     
     blocks{
@@ -7,9 +7,8 @@ query{
       __typename
     }
     transactions{
-      __typename
       count
-      amount
+      __typename
     }
   }
 }

@@ -1,50 +1,15 @@
 <template>
-<div>
-    <div class="hello" v-for="(item, index) in ethereum.dexTrades" :key="index">
-      {{item.count}}
-    </div>
-</div>
-  
+  <div>
+
+  </div>
 </template>
 
 <script>
-import gql from "graphql-tag"
-
-export default {
-  apollo:{
-    ethereum: gql`
-      query{
-        ethereum {
-          dexTrades( options: {desc: "count"}
-          ) {
-            count
-            tradeAmount(in:USD)
-            exchange {
-              fullName
-            }
-            
-          }
-        }
-      }
-    `
+  export default {
+    
   }
-}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

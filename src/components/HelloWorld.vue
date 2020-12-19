@@ -1,9 +1,13 @@
 <template>
   <div class="landing">
     <div class="main">
-      <h1>BLOCK-Q</h1>
-      <p>transactions and blocks information gotten from the top Cryptos in the world</p>
-      <router-link to="/blockchains">See Information</router-link>
+      <div class="en">
+        <h1>BLOCK-Q</h1>
+      </div>
+      <div class="en">
+        <p>transactions and blocks information gotten from the top Cryptos in the world</p>      
+      </div>  
+      <router-link class="link" to="/blockchains">See Information</router-link>      
     </div>
     <div class="foot">
       <p>Created with Vue and <a href="https://explorer.bitquery.io/" target="_blank">Bitquery GraphQL API</a> </p>
@@ -15,13 +19,38 @@
 </template>
 
 <script>
+import { gsap } from "gsap"
   export default {
-    
+    mounted() {
+      gsap.from(".main h1, .main p", 1, {
+        transform: "translateY(100%)",
+        ease: "expo",
+        delay: 1,
+      })
+      gsap.from(".link", 1, {
+        opacity: 0,
+        ease: "expo",
+        delay: 1
+      })
+      gsap.from(".bitcoin, .eth", 1, {
+        opacity: 0,
+        transform: "translateY(-10px)",
+        ease: "expo",
+        delay: 2
+      })
+      gsap.from(".hand", 1,{
+        transform: "translateX(100%)",
+        ease: "expo",
+        delay: 3
+      })
+    },
   }
 </script>
 
 <style scoped>
-
+.en{
+  overflow: hidden;
+}
 .main{
   padding: 0px 0px 0px 50px;
   height: 80vh;
@@ -36,10 +65,11 @@
 }
 .main p{
   color: #828282;
-  font-size: 24px
+  font-size: 24px;
+
 }
 .main a{
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 15px 20px;
   background: #FFB54E;
   color: white;
@@ -58,7 +88,7 @@
   color: black
 }
 .hand{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
 }
